@@ -2,6 +2,7 @@ import React from "react";
 import AboutSection from "@/components/AboutSection";
 import LeadershipSection from "@/components/LeadershipSection";
 import WorkingProcessSection from "@/components/WorkingProcessSection";
+import ConsultationSection from "@/components/ConsultationSection";
 import CtaBanner from "@/components/CtaBanner";
 import PageBanner from "@/components/PageBanner";
 
@@ -17,14 +18,16 @@ export default function AboutPage() {
         tag="About Us"
         title="About SoftZen IT" 
         subtitle="We build scalable architectures, bespoke software, and AI-driven applications for modern enterprises globally."
-        image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop"
+        image="/images/RAW09562.jpg"
       />
       <div>
         <AboutSection />
       </div>
       <LeadershipSection />
       <WorkingProcessSection />
+      <ConsultationSection />
       <CtaBanner />
     </>
   );
 }
+

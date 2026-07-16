@@ -180,6 +180,9 @@ const Navbar = () => {
               <Link href="/about" onClick={closeMenu} className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-all duration-300 py-1 cursor-pointer group">
                 <FaInfoCircle className="text-gray-400 group-hover:text-blue-600 transition-colors" /> About
               </Link>
+              <Link href="/consultation" onClick={closeMenu} className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-all duration-300 py-1 cursor-pointer group">
+                <FaBriefcase className="text-gray-400 group-hover:text-blue-600 transition-colors" /> Consultation
+              </Link>
               
               {/* <Link href="/contact" onClick={closeMenu} className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-all duration-300 py-1 cursor-pointer group">
                 <FaEnvelope className="text-gray-400 group-hover:text-blue-600 transition-colors" /> Contact
@@ -221,6 +224,7 @@ const Navbar = () => {
             <Link onClick={closeMenu} href="/" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaHome className="text-gray-400" /> Home</Link>
             <Link onClick={closeMenu} href="/services" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaLaptopCode className="text-gray-400" /> Services</Link>
             <Link onClick={closeMenu} href="/about" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaInfoCircle className="text-gray-400" /> About</Link>
+            <Link onClick={closeMenu} href="/consultation" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaBriefcase className="text-gray-400" /> Consultation</Link>
             <Link onClick={closeMenu} href="/projects" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaBriefcase className="text-gray-400" /> Portfolio</Link>
             <Link onClick={closeMenu} href="/contact" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaEnvelope className="text-gray-400" /> Contact</Link>
 

@@ -5,9 +5,9 @@ import * as LucideIcons from "lucide-react";
 
 const images = [
   "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop", // Guy at laptop
-  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop", // Guys looking at screen
-  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop", // Video call
-  "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop", // 4 people discussing
+  "/images/RAW09482.jpg", // Guys looking at screen
+  "/images/RAW09407.jpg", // Video call
+  "/images/RAW09465.jpg", // 4 people discussing
 ];
 
 const ServicesSection = () => {

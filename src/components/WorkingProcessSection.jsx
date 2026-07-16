@@ -91,18 +91,7 @@ const WorkingProcessSection = () => {
 
           {/* Right Column: Visual Team Card */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-full max-w-md bg-[#0B0F19] text-white border border-white/10 p-6 rounded-3xl shadow-2xl relative overflow-hidden flex flex-col items-center justify-center min-h-[220px]">
-              <div className="absolute inset-0 bg-slate-950/40 z-0" />
-              <div className="relative z-10 h-12 w-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 mb-3 text-xl">
-                ⚙️
-              </div>
-              <h4 className="relative z-10 text-xs font-bold text-gray-400 uppercase tracking-wider">
-                Development Team
-              </h4>
-              <p className="relative z-10 text-[10px] text-gray-500 font-medium tracking-wide mt-1 text-center">
-                Content Required from SoftZen IT
-              </p>
-            </div>
+            <img className="rounded-2xl" src="images/RAW09406.jpg" alt="" />
           </div>
 
         </div>

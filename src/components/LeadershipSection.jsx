@@ -8,7 +8,7 @@ const teamMembers = [
     name: "Md. Abdul Gaffar",
     role: "Founder",
     image: "/team2.jpg", // Replace with actual image path when available
-    bio: "Founder of SoftZen IT and leader of Ocean Accessories Ltd. & R.K. Garments, with 25+ years of proven management and strategic vision experience.",
+    bio: "Founder of SoftZen IT with 25+ years of proven experience in business development and strategic management, guiding corporate vision and growth.",
     socials: {
       facebook: "https://www.facebook.com/gaffar.khokon",
       youtube: "https://www.youtube.com/@soft.zen_it",
@@ -20,7 +20,7 @@ const teamMembers = [
     name: "Ahasan Hamza",
     role: "Co-Founder & CEO",
     image: "/team1.png", // Placeholder until image is provided
-    bio: "Leading operations, engineering, and execution of our core technology solutions and enterprise architectures.",
+    bio: "Co-Founder & CEO with 10+ years of experience running tech companies, managing engineering divisions, and scaling modern software platforms.",
     socials: {
       facebook: "#",
       youtube: "https://www.youtube.com/@soft.zen_it",
@@ -32,7 +32,7 @@ const teamMembers = [
     name: "Md. Nuruzzaman",
     role: "COO",
     image: "/team3.jpg", // Replace with actual image path when available
-    bio: "COO of SoftZen IT, ensuring smooth operations and efficiency. Skilled in management with experience from leading garment accessory companies.",
+    bio: "COO of SoftZen IT with 15+ years of experience in company management, operational efficiency, and organizational growth.",
     socials: {
       facebook: "https://www.facebook.com/nuruzzamanrubel07",
       youtube: "https://www.youtube.com/@soft.zen_it",

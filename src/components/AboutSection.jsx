@@ -74,7 +74,7 @@ const AboutSection = () => {
           {/* Vision Card */}
           <div className="group rounded-3xl bg-white overflow-hidden border border-slate-100 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-600/5">
             <div className="h-64 sm:h-72 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Our Vision" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/images/RAW09455.jpg" alt="Our Vision" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
               <div className="absolute bottom-6 left-8 flex items-center gap-4">
                 <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg">
