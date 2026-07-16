@@ -76,15 +76,15 @@ const ContactPage = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      text: "House 84, Road 4, Block B, Banani, Dhaka-1213",
+      text: "House 41, Road 13, Block D, Banani, Dhaka 1213",
     },
     {
       icon: Mail,
-      text: "hello@softzenit.com",
+      text: "support@softzenit.com",
     },
     {
       icon: Phone,
-      text: "+880 1700 000000",
+      text: "+880 1797 933 772",
     },
   ];
 

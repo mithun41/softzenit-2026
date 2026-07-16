@@ -47,19 +47,19 @@ const AboutSection = () => {
               
               <div className="relative z-10 grid grid-cols-2 gap-10">
                 <div>
-                  <h3 className="text-4xl font-extrabold text-white mb-2">2021</h3>
+                  <h3 className="text-4xl font-extrabold text-white mb-2">2016</h3>
                   <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Founded</p>
                 </div>
                 <div>
-                  <h3 className="text-4xl font-extrabold text-white mb-2">100+</h3>
+                  <h3 className="text-4xl font-extrabold text-white mb-2">500+</h3>
                   <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Global Clients</p>
                 </div>
                 <div>
-                  <h3 className="text-4xl font-extrabold text-white mb-2">50+</h3>
+                  <h3 className="text-4xl font-extrabold text-white mb-2">100+</h3>
                   <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Engineers</p>
                 </div>
                 <div>
-                  <h3 className="text-4xl font-extrabold text-white mb-2">98%</h3>
+                  <h3 className="text-4xl font-extrabold text-white mb-2">100%</h3>
                   <p className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Satisfaction</p>
                 </div>
               </div>
