@@ -91,7 +91,7 @@ const WorkingProcessSection = () => {
 
           {/* Right Column: Visual Team Card */}
           <div className="flex justify-center lg:justify-end">
-            <img className="rounded-2xl" src="images/RAW09406.jpg" alt="" />
+            <img className="rounded-2xl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqs19r8S4SxEbB7aZOlpOVFl63K0-chYzsQGOqT5lqhYfqSiuTJcKhUcVV&s=10" alt="" />
           </div>
 
         </div>

@@ -12,6 +12,56 @@ const Navbar = () => {
   const pathname = usePathname();
   const menuRef = useRef(null);
 
+  // Group and sort services for the columns dynamically by category and slug to ensure balanced heights (8, 8, 6, 8)
+  const softwareAndAiRaw = allServices.filter(
+    (s) => s.category === "Core Engineering" || s.category === "AI & Automation"
+  );
+  const lastSlugs = new Set(["ai-agent-integration", "ai-software-solutions", "corporate-solutions"]);
+  const softwareAndAiFirst = softwareAndAiRaw
+    .filter((s) => !lastSlugs.has(s.slug))
+    .sort((a, b) => a.title.localeCompare(b.title));
+  const softwareAndAiLast = softwareAndAiRaw
+    .filter((s) => lastSlugs.has(s.slug))
+    .sort((a, b) => a.title.localeCompare(b.title));
+  const softwareAndAi = [...softwareAndAiFirst, ...softwareAndAiLast];
+
+  const digitalAndBusiness = allServices
+    .filter((s) => 
+      s.slug === "api-integrations" || 
+      s.slug === "cloud-solutions" || 
+      s.slug === "digital-marketing" || 
+      s.slug === "crm-systems" || 
+      s.slug === "pos-software" || 
+      s.slug === "hrm-biometric" || 
+      s.slug === "accounting-billing" || 
+      s.slug === "isp-billing"
+    )
+    .sort((a, b) => a.title.localeCompare(b.title));
+
+  const enterpriseErp = allServices
+    .filter((s) => 
+      s.slug === "erp-development" || 
+      s.slug === "factory-erp" || 
+      s.slug === "garments-erp" || 
+      s.slug === "manufacturing-erp" || 
+      s.slug === "real-estate-software" || 
+      s.slug === "restaurant-software"
+    )
+    .sort((a, b) => a.title.localeCompare(b.title));
+
+  const industrySpecificErp = allServices
+    .filter((s) => 
+      s.slug === "hospital-erp" || 
+      s.slug === "dental-erp" || 
+      s.slug === "diagnostic-erp" || 
+      s.slug === "medical-college-erp" || 
+      s.slug === "school-erp" || 
+      s.slug === "college-erp" || 
+      s.slug === "university-erp" || 
+      s.slug === "online-education-erp"
+    )
+    .sort((a, b) => a.title.localeCompare(b.title));
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -61,22 +111,23 @@ const Navbar = () => {
   return (
     <>
       <nav 
+        ref={menuRef}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           open
             ? "bg-white border-b border-gray-200 py-3"
             : scrolled 
-              ? "bg-white/95 backdrop-blur-xl border-b border-gray-200 py-3 shadow-sm" 
-              : "bg-white/90 backdrop-blur-md border-b border-transparent py-4"
+              ? "bg-white/80 backdrop-blur-md shadow-md py-4" 
+              : "bg-white py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between">
             
-            <Link href="/" onClick={closeMenu} className="flex items-center gap-2 group">
+            <Link href="/" onClick={closeMenu} className="flex-shrink-0">
               <img 
                 src="/logo-two.png" 
                 alt="SoftZen IT Logo" 
-                className="h-9 transition-transform duration-300 group-hover:scale-105" 
+                className="h-10" 
               />
             </Link>
 
@@ -85,7 +136,7 @@ const Navbar = () => {
                 <FaHome className="text-gray-400 group-hover:text-blue-600 transition-colors" /> Home
               </Link>
               {/* Services Mega Menu */}
-              <div className="group" ref={menuRef}>
+              <div className="group">
                 <button onClick={toggleServices} className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-all duration-300 py-6 cursor-pointer focus:outline-none">
                   <FaLaptopCode className={`text-gray-400 group-hover:text-blue-600 transition-colors ${servicesOpen ? 'text-blue-600' : ''}`} /> 
                   <span className={servicesOpen ? 'text-blue-600' : ''}>Services</span>
@@ -104,10 +155,10 @@ const Navbar = () => {
                       <div>
                         <div className="flex items-center gap-2 mb-6">
                           <div className="w-1.5 h-1.5 bg-blue-500 rounded-sm"></div>
-                          <h4 className="text-slate-800 font-bold uppercase tracking-wider text-[13px]">Software & AI Engineering</h4>
+                          <h4 className="text-slate-800 font-bold uppercase tracking-wider text-[13px]">Software & AI</h4>
                         </div>
                         <ul className="space-y-4 text-[14px] font-normal normal-case tracking-normal text-slate-600">
-                          {allServices.slice(0, 8).map((service, idx) => (
+                          {softwareAndAi.map((service, idx) => (
                             <li key={idx}>
                               <Link href={`/services/${service.slug}`} onClick={closeMenu} className="hover:text-blue-600 transition-colors block line-clamp-1" title={service.title}>
                                 {service.title}
@@ -121,10 +172,10 @@ const Navbar = () => {
                       <div>
                         <div className="flex items-center gap-2 mb-6">
                           <div className="w-1.5 h-1.5 bg-blue-500 rounded-sm"></div>
-                          <h4 className="text-slate-800 font-bold uppercase tracking-wider text-[13px]">Digital & Cloud</h4>
+                          <h4 className="text-slate-800 font-bold uppercase tracking-wider text-[13px]">Digital & Business Tools</h4>
                         </div>
                         <ul className="space-y-4 text-[14px] font-normal normal-case tracking-normal text-slate-600">
-                          {allServices.slice(8, 16).map((service, idx) => (
+                          {digitalAndBusiness.map((service, idx) => (
                             <li key={idx}>
                               <Link href={`/services/${service.slug}`} onClick={closeMenu} className="hover:text-blue-600 transition-colors block line-clamp-1" title={service.title}>
                                 {service.title}
@@ -141,7 +192,7 @@ const Navbar = () => {
                           <h4 className="text-slate-800 font-bold uppercase tracking-wider text-[13px]">Enterprise ERP</h4>
                         </div>
                         <ul className="space-y-4 text-[14px] font-normal normal-case tracking-normal text-slate-600">
-                          {allServices.slice(16, 24).map((service, idx) => (
+                          {enterpriseErp.map((service, idx) => (
                             <li key={idx}>
                               <Link href={`/services/${service.slug}`} onClick={closeMenu} className="hover:text-blue-600 transition-colors block line-clamp-1" title={service.title}>
                                 {service.title}
@@ -158,7 +209,7 @@ const Navbar = () => {
                           <h4 className="text-slate-800 font-bold uppercase tracking-wider text-[13px]">Industry Specific ERP</h4>
                         </div>
                         <ul className="space-y-4 text-[14px] font-normal normal-case tracking-normal text-slate-600">
-                          {allServices.slice(24, 30).map((service, idx) => (
+                          {industrySpecificErp.map((service, idx) => (
                             <li key={idx}>
                               <Link href={`/services/${service.slug}`} onClick={closeMenu} className="hover:text-blue-600 transition-colors block line-clamp-1" title={service.title}>
                                 {service.title}
@@ -180,9 +231,12 @@ const Navbar = () => {
               <Link href="/about" onClick={closeMenu} className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-all duration-300 py-1 cursor-pointer group">
                 <FaInfoCircle className="text-gray-400 group-hover:text-blue-600 transition-colors" /> About
               </Link>
-              <Link href="/consultation" onClick={closeMenu} className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-all duration-300 py-1 cursor-pointer group">
-                <FaBriefcase className="text-gray-400 group-hover:text-blue-600 transition-colors" /> Consultation
+              <Link href="/contact" onClick={closeMenu} className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-all duration-300 py-1 cursor-pointer group">
+                <FaEnvelope className="text-gray-400 group-hover:text-blue-600 transition-colors" /> Contact
               </Link>
+              {/* <Link href="/consultation" onClick={closeMenu} className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-all duration-300 py-1 cursor-pointer group">
+                <FaBriefcase className="text-gray-400 group-hover:text-blue-600 transition-colors" /> Consultation
+              </Link> */}
               
               {/* <Link href="/contact" onClick={closeMenu} className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-all duration-300 py-1 cursor-pointer group">
                 <FaEnvelope className="text-gray-400 group-hover:text-blue-600 transition-colors" /> Contact
@@ -224,8 +278,8 @@ const Navbar = () => {
             <Link onClick={closeMenu} href="/" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaHome className="text-gray-400" /> Home</Link>
             <Link onClick={closeMenu} href="/services" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaLaptopCode className="text-gray-400" /> Services</Link>
             <Link onClick={closeMenu} href="/about" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaInfoCircle className="text-gray-400" /> About</Link>
-            <Link onClick={closeMenu} href="/consultation" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaBriefcase className="text-gray-400" /> Consultation</Link>
-            <Link onClick={closeMenu} href="/projects" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaBriefcase className="text-gray-400" /> Portfolio</Link>
+            {/* <Link onClick={closeMenu} href="/consultation" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaBriefcase className="text-gray-400" /> Consultation</Link>
+            <Link onClick={closeMenu} href="/projects" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaBriefcase className="text-gray-400" /> Portfolio</Link> */}
             <Link onClick={closeMenu} href="/contact" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaEnvelope className="text-gray-400" /> Contact</Link>
 
             <Link

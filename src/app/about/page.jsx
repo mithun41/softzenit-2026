@@ -25,7 +25,7 @@ export default function AboutPage() {
       </div>
       <LeadershipSection />
       <WorkingProcessSection />
-      <ConsultationSection />
+      {/* <ConsultationSection /> */}
       <CtaBanner />
     </>
   );

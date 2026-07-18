@@ -4,15 +4,15 @@ import { allServices } from "@/data/services";
 import * as LucideIcons from "lucide-react";
 
 const images = [
-  "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop", // Guy at laptop
-  "/images/RAW09482.jpg", // Guys looking at screen
-  "/images/RAW09407.jpg", // Video call
-  "/images/RAW09465.jpg", // 4 people discussing
+  "https://ignite.ie/wp-content/uploads/2023/01/AdobeStock_508936825_resized-1080x675.jpg", // Guy at laptop
+  "https://img.magnific.com/free-vector/app-development-banner_33099-1720.jpg?semt=ais_hybrid&w=740&q=80", // Guys looking at screen
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsv4zEeuaUmQTy8IZ96gS2WtxUau9DoNc3YVxewvb9CP9sNI88XkMmdmQC&s=10", // 4 people discussing
+  "https://dskglobalsolutions.com/wp-content/uploads/2024/03/Ecom.webp", // Video call
 ];
 
 const ServicesSection = () => {
   // Grab the first 5 services to match the 9-item grid pattern (5 text, 4 images)
-  const featuredServices = allServices.slice(0, 5);
+  const featuredServices = allServices.slice(0, 6);
 
   const gridLayout = [
     { type: "service", data: featuredServices[0] },
@@ -23,7 +23,7 @@ const ServicesSection = () => {
     { type: "image", src: images[2] },
     { type: "service", data: featuredServices[3] },
     { type: "image", src: images[3] },
-    { type: "service", data: featuredServices[4] },
+    { type: "service", data: featuredServices[5] },
   ];
 
   return (
@@ -32,7 +32,7 @@ const ServicesSection = () => {
         
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium text-slate-900 tracking-tight max-w-xl leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-slate-900 tracking-tight max-w-xl leading-tight">
             Drive Growth with Our <br className="hidden sm:block" />
             Core Capabilities
           </h2>
