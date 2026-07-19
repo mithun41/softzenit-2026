@@ -131,7 +131,7 @@ const Navbar = () => {
               />
             </Link>
 
-            <div className="hidden lg:flex items-center gap-8 font-josefin font-light tracking-[0.1em] uppercase text-[13px]">
+            <div className="hidden lg:flex items-center gap-8 font-josefin font-light tracking-[0.1em] text-[13px]">
               <Link href="/" onClick={closeMenu} className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-all duration-300 py-1 group">
                 <FaHome className="text-gray-400 group-hover:text-blue-600 transition-colors" /> Home
               </Link>
@@ -274,7 +274,7 @@ const Navbar = () => {
             open ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex flex-col gap-6 px-8 py-10 h-[calc(100vh-80px)] overflow-y-auto font-josefin font-light tracking-[0.1em] uppercase text-[15px]">
+          <div className="flex flex-col gap-6 px-8 py-10 h-[calc(100vh-80px)] overflow-y-auto font-josefin font-light tracking-[0.1em] text-[15px]">
             <Link onClick={closeMenu} href="/" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaHome className="text-gray-400" /> Home</Link>
             <Link onClick={closeMenu} href="/services" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaLaptopCode className="text-gray-400" /> Services</Link>
             <Link onClick={closeMenu} href="/about" className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition py-3 border-b border-gray-100"><FaInfoCircle className="text-gray-400" /> About</Link>

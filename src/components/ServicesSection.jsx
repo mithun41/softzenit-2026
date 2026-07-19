@@ -4,10 +4,10 @@ import { allServices } from "@/data/services";
 import * as LucideIcons from "lucide-react";
 
 const images = [
-  "https://ignite.ie/wp-content/uploads/2023/01/AdobeStock_508936825_resized-1080x675.jpg", // Guy at laptop
-  "https://img.magnific.com/free-vector/app-development-banner_33099-1720.jpg?semt=ais_hybrid&w=740&q=80", // Guys looking at screen
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsv4zEeuaUmQTy8IZ96gS2WtxUau9DoNc3YVxewvb9CP9sNI88XkMmdmQC&s=10", // 4 people discussing
-  "https://dskglobalsolutions.com/wp-content/uploads/2024/03/Ecom.webp", // Video call
+  "https://ignite.ie/wp-content/uploads/2023/01/AdobeStock_508936825_resized-1080x675.jpg", 
+  "https://img.magnific.com/free-vector/app-development-banner_33099-1720.jpg?semt=ais_hybrid&w=740&q=80", 
+  "https://virtualoplossing.com/blog/wp-content/uploads/2025/01/Web-Development-Services.jpg", 
+  "https://dskglobalsolutions.com/wp-content/uploads/2024/03/Ecom.webp", 
 ];
 
 const ServicesSection = () => {
